@@ -5,7 +5,17 @@ def multiply_dict(dict, n):
     for x in dict:
         dict[x] = dict[x]*n
     return dict
-    
+
+'''
+島田コメント
+
+問題ないですが、
+return {key: value * n for key, value in dict.items()}
+という辞書の内包表記を使うとよりシンプルにかけます（そのうえ高速）
+
+あとdictも予約語なので、変数名には使わないように！
+'''
+
 #値が数値である2つのディクショナリを取って、そのディクショナリを合体したディクショナリを返す関数 merge_dict を作れ。同じキーをもっているものに関しては、値を足し算する。(出力のディクショナリの順番は問わない)★
 def merge_dict(dict1, dict2):
     for key in dict2:
@@ -19,3 +29,7 @@ def merge_dict(dict1, dict2):
 def sort_dict_by_value(dict):
     sorted_dict = {k: v for k, v in sorted(dict.items(), key=lambda x:x[1], reverse = True)}
     return sorted_dict.keys()
+
+'''
+ナイス内包表記！！
+'''

@@ -7,6 +7,14 @@ def judge_odd_even(x):
     else:
         print("odd")
 
+'''
+島田コメント
+
+これは「文字列”odd”/"even"を返す関数」ではなく、「文字列"odd"/"even"をプリントする関数」です！
+Pythonのコンソールだと、返されたものがプリントされるから紛らわしいですが
+
+'''
+
 #配列(リスト）list について、偶数の数字の数を返す関数 count_even を作れ
 def count_even(list):
     count = 0
@@ -21,3 +29,26 @@ def list_contains(string, list):
         print("True")
     else:
         print("False")
+
+
+'''
+島田コメント
+
+1と同様に、これは"True"/"False"という文字列をプリントする関数になってます
+しかも True/Falseは 真偽値を表す bool型のリテラルなので、 "True" / "False"とも違います
+以下例です。
+
+>>> 10 > 0
+True
+>>> 10 < 0
+False
+>>> bool(1)
+True
+>>> bool(0)
+False
+>>> bool("False)
+True
+>>> 1 in [1,2,3]
+True
+
+'''
