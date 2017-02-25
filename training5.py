@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 #Scoutクラスを作る。Scoutクラスは、インスタンス変数として、name（スカウト名, 文字列）, worker_type(雇用形態, 文字列), skills (要求スキル文字列のリスト)を持つ。これらの値をとって初期化するメソッド __init__を作れ。
-
 #Scoutクラスに、そのScoutの候補者を保持するインスタンス変数candidatesを追加せよ。candidatesはPersonオブジェクトのリストである。Scoutクラスに、Personをcandidatesに追加するインスタンスメソッドadd_candidateを追加せよ
 class Scout:
     def __init__(self, name, worker_type, skills, candidates):
@@ -39,7 +38,6 @@ class Scout:
                 candidates_or.append(candidate.name)
         return candidates_or
 
-
     #Scoutクラスに、skillsに定義されたスキルすべてをもっている候補者のリストを返すメソッド search_candidate_andを定義せよ。
     def search_candidate_and(self):
         candidates_and = []
@@ -48,6 +46,8 @@ class Scout:
             if len(set(skills_set)) == len(skills_set) - len(self.skills):
                 candidates_and.append(candidate.name)
         return candidates_and
+
+
 #Personクラスを作る。Personクラスは、インスタンス変数として、name（人名, 文字列）, skills (保持スキル文字列のリスト）を持つ。これらの値をとって初期化するメソッド __init__を作れ。
 class Person:
     def __init__(self, name, skills):
