@@ -25,3 +25,6 @@ def round_over_5(list1):
             list2.append(round(x))
     return list2
 
+#1．制御処理の問題2を１行で書け。★
+def count_even_ver2(list1):
+    return len(list(x for x in list1 if x%2 == 0))
